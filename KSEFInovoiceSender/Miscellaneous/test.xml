@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Faktura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://crd.gov.pl/wzor/2025/06/25/13775/">
+    <Naglowek>
+        <KodFormularza kodSystemowy="FA (3)" wersjaSchemy="1-0E">FA</KodFormularza>
+        <WariantFormularza>3</WariantFormularza>
+        <DataWytworzeniaFa>2026-02-28T13:53:03.3842848Z</DataWytworzeniaFa>
+        <SystemInfo>Aplikacja Podatnika KSeF</SystemInfo>
+    </Naglowek>
+    <Podmiot1>
+        <DaneIdentyfikacyjne>
+            <NIP>2530001942</NIP>
+            <Nazwa>MULTILAN Rafał Błażejowski</Nazwa>
+        </DaneIdentyfikacyjne>
+        <Adres>
+            <KodKraju>PL</KodKraju>
+            <AdresL1>ul. Test-Wilcza 14 Włocławek 87-800 Włocławek</AdresL1>
+        </Adres>
+    </Podmiot1>
+    <Podmiot2>
+        <DaneIdentyfikacyjne>
+            <NIP>5270104568</NIP>
+            <Nazwa>EXATEL SPÓŁKA AKCYJNA</Nazwa>
+        </DaneIdentyfikacyjne>
+        <Adres>
+            <KodKraju>PL</KodKraju>
+            <AdresL1>ul. Test-Krucza 47 Warszawa 04-164 Warszawa</AdresL1>
+        </Adres>
+        <AdresKoresp>
+            <KodKraju>PL</KodKraju>
+            <AdresL1>ul. Korespondencji 46/45</AdresL1>
+            <AdresL2>78-500 Drawsko Pomorskie</AdresL2>
+        </AdresKoresp>
+        <NrKlienta>IdKlienta</NrKlienta>
+        <JST>2</JST>
+        <GV>2</GV>
+    </Podmiot2>
+    <Fa>
+        <KodWaluty>PLN</KodWaluty>
+        <P_1>2026-02-28</P_1>
+        <P_2>FS006-02-2026</P_2>
+        <OkresFa>
+            <P_6_Od>2026-02-01</P_6_Od>
+            <P_6_Do>2026-02-28</P_6_Do>
+        </OkresFa>
+        <P_13_1>389.43</P_13_1>
+        <P_14_1>89.57</P_14_1>
+        <P_13_2>83.33</P_13_2>
+        <P_14_2>6.67</P_14_2>
+        <P_15>569</P_15>
+        <Adnotacje>
+            <P_16>2</P_16>
+            <P_17>2</P_17>
+            <P_18>2</P_18>
+            <P_18A>2</P_18A>
+            <Zwolnienie>
+                <P_19N>1</P_19N>
+            </Zwolnienie>
+            <NoweSrodkiTransportu>
+                <P_22N>1</P_22N>
+            </NoweSrodkiTransportu>
+            <P_23>2</P_23>
+            <PMarzy>
+                <P_PMarzyN>1</P_PMarzyN>
+            </PMarzy>
+        </Adnotacje>
+        <RodzajFaktury>VAT</RodzajFaktury>
+        <FaWiersz>
+            <NrWierszaFa>1</NrWierszaFa>
+            <P_7>Internet MULTINET 400M</P_7>
+            <P_8A>szt</P_8A>
+            <P_8B>1</P_8B>
+            <P_9B>79</P_9B>
+            <P_11A>79</P_11A>
+            <P_12>23</P_12>
+        </FaWiersz>
+        <FaWiersz>
+            <NrWierszaFa>2</NrWierszaFa>
+            <P_7>Telewizja STARTOWY PLUS</P_7>
+            <P_8A>szt</P_8A>
+            <P_8B>1</P_8B>
+            <P_9B>90</P_9B>
+            <P_11A>90</P_11A>
+            <P_12>8</P_12>
+        </FaWiersz>
+        <FaWiersz>
+            <NrWierszaFa>3</NrWierszaFa>
+            <P_7>Aktywacja dostępu do internetu</P_7>
+            <P_8A>szt</P_8A>
+            <P_8B>1</P_8B>
+            <P_9B>150</P_9B>
+            <P_11A>150</P_11A>
+            <P_12>23</P_12>
+        </FaWiersz>
+        <FaWiersz>
+            <NrWierszaFa>4</NrWierszaFa>
+            <P_7>Usługa serwisowa</P_7>
+            <P_8A>szt</P_8A>
+            <P_8B>1</P_8B>
+            <P_9B>250</P_9B>
+            <P_11A>250</P_11A>
+            <P_12>23</P_12>
+        </FaWiersz>
+    </Fa>
+</Faktura>

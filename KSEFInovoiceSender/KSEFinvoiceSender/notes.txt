@@ -1,0 +1,5 @@
+﻿ISSUES: 
+
+UPO is requested and awaited even if all invoices are rejected.
+
+REMOVE HARDCODED CREDENTIALS and move them to configuration file finally. 
