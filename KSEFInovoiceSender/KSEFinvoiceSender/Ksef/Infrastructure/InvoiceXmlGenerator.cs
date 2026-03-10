@@ -22,7 +22,6 @@ public class InvoiceXmlGenerator : IInvoiceXmlGenerator
             try
             {
                 // --- STEP 1: Map DB Data to Domain Model ---
-                // TODO: Replace this stub with your actual mapper once it is implemented
                 KsefReadyInvoice readyInvoice = Aggregator.MapToReadyInvoice(dbData);
 
                 // --- STEP 2: Map Domain Model to strict KSeF XSD class ---
@@ -32,18 +31,14 @@ public class InvoiceXmlGenerator : IInvoiceXmlGenerator
                 byte[] xmlBytes = KsefInvoiceToXmlMapper.SerializeInvoiceToXml(ksefFaktura);
 
                 // --- STEP 4: Package it for the Orchestrator ---
-                // TODO: Replace '0' with your actual dbData.Id property once implemented
-                int localId = 0;
-                string sellerNip = readyInvoice.Seller.Nip;
-
-                var pendingInvoice = new PendingInvoice(localId, sellerNip, xmlBytes);
+                var pendingInvoice = new PendingInvoice(dbData.Id, readyInvoice.Seller.Nip, xmlBytes);
                 pendingInvoices.Add(pendingInvoice);
             }
             catch (Exception ex)
             {
                 // A failure in mapping or serializing one invoice should not crash the whole batch.
                 // It is safely caught here.
-                Console.WriteLine($"[ERROR] Pipeline failed for a DB Record: {ex.Message}");
+                Console.WriteLine($"[ERROR] Pipeline failed for DB Record ID {dbData.Id} ({dbData.NumerF}): {ex.Message}");
             }
         }
 

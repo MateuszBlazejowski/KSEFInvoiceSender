@@ -10,7 +10,10 @@ namespace KSEFinvoiceSender.Database;
 
 public interface IInvoiceRepository
 {
-    Task<List<InvoiceDBdata>> GetPendingInvoicesAsync();
+    Task<List<InvoiceDBdata>> GetPendingInvoicesAsync(string year);
+
+    Task<InvoiceDBdata> GetSpecificInvoicesAsync(string year, string invoiceID);
+
     Task MarkAsSentAsync(int localId, string ksefNumber, DateTimeOffset acquisitionDate);
     Task MarkAsFailedAsync(int localId, string errorMessage);
     Task SaveBatchUpoAsync(string nip, string upoXmlContent);

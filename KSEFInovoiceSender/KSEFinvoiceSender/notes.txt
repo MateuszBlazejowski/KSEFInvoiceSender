@@ -1,5 +1,47 @@
-﻿ISSUES: 
+﻿Notatki do congfig: 
+
+environment: DEMO, TEST, PROD
+
+
+
+ToDO:
+
+implement database pipeline up to KsefReadyInvoice + 
+
+config should be where the environment is choosen.
+
+Have the year passed by a parameter: after flag -y, it is optional, if not provided, it will be the current year.
+ - it is neccessarty for deciding which fs table to query from.
+
+Have the optional parameter after flag -f, then we query only the invoice of the number given after the flag
+
+
+ISSUES: 
 
 UPO is requested and awaited even if all invoices are rejected.
 
-REMOVE HARDCODED CREDENTIALS and move them to configuration file finally. 
+
+
+
+Questions: 
+
+Should this be in the db:  
+GenerationDate = DateTime.Now? 
+
+Czy nie powinnismy dodac tablicy UPOs, i przechowywac ID UPO dla kazdej faktury? 
+
+Czy takie mapowanie jest dobre: 
+    private static string MapTowarName(string? towar)
+    {
+        return towar?.Trim().ToLowerInvariant() switch
+        {
+            "inst" => "Instalacja",
+            "net" => "Internet",
+            "serw" => "Serwis",
+            "tv" => "Telewizja",
+            _ => towar?.Trim() ?? string.Empty
+        };
+    }
+
+
+
